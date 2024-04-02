@@ -1,0 +1,229 @@
+:root{
+  --Blue: hsl(246, 80%, 60%);
+  --Light_orange: hsl(15, 100%, 70%); /*(work)*/
+  --Soft_blue: hsl(195, 74%, 62%);  /*(play)*/
+  --Light_red: hsl(348, 100%, 68%); /*(study)*/
+  --Lime_green: hsl(145, 58%, 55%); /*(exercise)*/
+  --Violet: hsl(264, 64%, 52%); /*(social)*/
+  --Soft_orange: hsl(43, 84%, 65%); /*(self care)*/
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(235, 45%, 61%);
+  --Pale_Blue: hsl(236, 100%, 87%);
+}
+
+body{
+  font-family: Rubik;
+  background-color: var(--Very_dark_blue);
+}
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.card{
+  display: grid;
+  grid-template-columns: repeat(4,fr);
+  grid-template-rows: repeat(2,fr);
+  grid-template-areas:  'user work play study'
+                        'user exer social care';
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.user{
+  grid-area: user;
+  background-color: var(--Dark_blue);
+  width: 14rem;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.user:hover{
+  cursor: pointer;
+}
+.user-info{
+  background-color: var(--Blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+}
+.user-image{
+  height: 5rem;
+  border: 4px solid white;
+  width: 5rem;
+  border-radius: 50px;
+}
+.report-head{
+  margin-bottom: 0;
+  color: var(--Pale_Blue);
+  font-size: 12px;
+  margin-top: 20px;
+}
+.user-name{
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+}
+.select{
+  padding: 20px 20px 0px 20px;
+}
+.select p{
+  color: var(--Pale_Blue);
+  font-weight: 300;
+}
+.select p:hover{
+  cursor: pointer;
+  color: white;
+}
+.work{
+  grid-area: work;
+  background-image: url(images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-color: var(--Light_orange);
+  background-position: right 10px top 0px;
+  position: relative;
+  border-radius: 12px;
+}
+.all{
+  width: 12rem;
+  height: 12rem;
+  background-repeat: no-repeat;
+  background-position: right 10px top -5px;
+  background-size: 4rem;
+  position: relative;
+  border-radius: 12px;
+}
+.upper{
+  background-color: var(--Dark_blue);
+  padding: 15px 15px 25px 15px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.upper:hover{
+  cursor: pointer;
+  background-color: rgb(53, 57, 111);
+}
+.about{
+  color: white;
+}
+.total-duration{
+  color: white;
+  font-weight: 300;
+  font-size: 45px;
+}
+.last-duration{
+  color: var(--Pale_Blue);
+  font-size: 10px;
+  font-weight: 300;
+}
+.play{
+  grid-area: play;
+  background-image: url(images/icon-play.svg);
+  background-color: var(--Soft_blue);
+
+}
+.study{
+  grid-area: study;
+  background-image: url(images/icon-study.svg);
+  background-color: var(--Light_red);
+
+}
+.exercise{
+  grid-area: exer;
+  background-image: url(images/icon-exercise.svg);
+  background-color: var(--Lime_green);
+}
+.social{
+  grid-area: social;
+  background-image: url(images/icon-social.svg);
+  background-color: var(--Violet);
+}
+.self-care{
+  grid-area: care;
+  background-image: url(images/icon-self-care.svg);
+  background-color: var(--Soft_orange);
+}
+.info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.duration p{
+  margin: 0;
+  padding: 0;
+}
+.ell:hover{
+  cursor: pointer;
+}
+
+@media (max-width: 450px){
+  .container{
+    height: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+  .user-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .user-image{
+    height: 3rem;
+    width: 3rem;
+  }
+  .report{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+  }
+  .report-head{
+    margin-top: 0;
+  }
+  .select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .user-name{
+    font-size: 16px;
+  }
+  .user{
+    width: 100%;
+  }
+  .total-duration{
+    font-size: 25px;
+  }
+  .duration{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .all{
+    width: 100%;
+    height: 10rem;
+  }
+  .last-duration{
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; color: white;}
+    .attribution a { color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="user">
+        <div class="user-info">
+          <img src="images/image-jeremy.png" alt="" srcset="" class="user-image">
+          <div class="report">
+            <p class="report-head">Report for</p>
+            <p class="user-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="select">
+          <p id="daily">Daily</p>
+          <p id="weekly">Weekly</p>
+          <p id="monthly">Monthly</p>
+        </div>
+      </div>
+      <div class="work all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Work</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Work-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Work-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="play all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Play</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Play-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Play-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="study all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Study</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Study-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Study-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Exercise</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Exercise-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Exercise-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="social all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Social</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Social-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Social-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="self-care all">
+        <div class="upper">
+          <div class="info">
+            <p class="about">Self care</p>
+            <img src="images/icon-ellipsis.svg" alt="" srcset="" class="ell">
+          </div>
+          <div class="duration">
+            <p class="total-duration" id="Self Care-duration">--hrs</p>
+            <p class="last-duration">Last <span class="duration-type"></span> - <span id="Self Care-previous-duration">--hrs</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="attribution"> 
+    Coded by <a href="#">Gautam</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
